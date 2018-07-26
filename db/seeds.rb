@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-10.times{Assembly.create!(name:Faker::LeagueOfLegends.location)}
+10.times{Assembly.create!(name:Faker::LeagueOfLegends.location,part_id:rand(1..10))}
 10.times{Part.create!(part_number:Faker::Number.number(10),assembly_id: rand(1..10))}

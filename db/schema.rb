@@ -14,8 +14,10 @@ ActiveRecord::Schema.define(version: 2018_07_26_174026) do
 
   create_table "assemblies", force: :cascade do |t|
     t.string "name"
+    t.integer "part_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["part_id"], name: "index_assemblies_on_part_id"
   end
 
   create_table "parts", force: :cascade do |t|
